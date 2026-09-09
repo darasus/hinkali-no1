@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Хинкали №1 — Сертолово, ул. Заречная 8</title>
+  <meta name="description" content="Хинкали ручной лепки в Сертолово. Свинина-говядина, говядина, баранина-говядина, сырные. Варёные и замороженные. Самовывоз. ул. Заречная, д. 8, рядом с «Пятёрочкой». Ежедневно 12:00–20:00.">
+  <meta property="og:title" content="Хинкали №1 — Сертолово">
+  <meta property="og:description" content="Хинкали ручной лепки. Варёные и замороженные, самовывоз. ул. Заречная 8, рядом с «Пятёрочкой». 12:00–20:00.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥟</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f0e0e;
+      --bg-2: #181616;
+      --card: #201d1d;
+      --line: #2e2a2a;
+      --text: #f4efe8;
+      --muted: #b3aaa1;
+      --red: #e3161b;
+      --red-dark: #b50f13;
+      --gold: #e6b552;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { font-family: Oswald, Impact, "Arial Narrow", sans-serif; text-transform: uppercase; letter-spacing: .02em; margin: 0; }
+    a { color: inherit; }
+    .wrap { width: min(1080px, 100% - 2.5rem); margin-inline: auto; }
+
+    /* Header */
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(15,14,14,.92); backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; }
+    .logo { font-family: Oswald, Impact, sans-serif; font-weight: 700; font-size: 1.5rem; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: .5rem; }
+    .logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 1.4rem; font-size: .95rem; font-weight: 500; }
+    .nav-links a { text-decoration: none; color: var(--muted); }
+    .nav-links a:hover { color: var(--text); }
+    .nav .call { display: none; }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav .call { display: inline-flex; }
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .85rem 1.4rem; border-radius: 8px;
+      font-weight: 600; text-decoration: none; font-size: 1rem;
+      border: 1px solid transparent; transition: background .15s, border-color .15s;
+    }
+    .btn-red { background: var(--red); color: #fff; }
+    .btn-red:hover { background: var(--red-dark); }
+    .btn-ghost { background: transparent; border-color: var(--line); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--muted); }
+    .btn.small { padding: .55rem .9rem; font-size: .9rem; }
+
+    /* Hero */
+    .hero {
+      position: relative; overflow: hidden;
+      padding: clamp(4rem, 10vw, 7rem) 0;
+      background:
+        radial-gradient(60% 80% at 80% 50%, rgba(227,22,27,.18), transparent 70%),
+        radial-gradient(40% 60% at 15% 90%, rgba(230,181,82,.10), transparent 70%),
+        var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero .wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 3rem; align-items: center; }
+    .eyebrow { color: var(--gold); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; font-size: .8rem; margin-bottom: 1rem; }
+    .hero h1 { font-size: clamp(2.6rem, 7vw, 4.8rem); line-height: 1; }
+    .hero h1 span { color: var(--red); }
+    .hero p.lead { font-size: 1.15rem; color: var(--muted); max-width: 34rem; margin: 1.25rem 0 2rem; }
+    .hero .actions { display: flex; flex-wrap: wrap; gap: .8rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2rem; }
+    .tag { border: 1px solid var(--line); border-radius: 999px; padding: .35rem .8rem; font-size: .85rem; color: var(--muted); }
+    .hero-art { display: grid; place-items: center; font-size: clamp(7rem, 18vw, 13rem); line-height: 1; filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); user-select: none; }
+    @media (max-width: 800px) {
+      .hero .wrap { grid-template-columns: 1fr; }
+      .hero-art { display: none; }
+    }
+
+    /* Sections */
+    section { padding: clamp(3rem, 7vw, 5rem) 0; }
+    .section-title { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: .4rem; }
+    .section-sub { color: var(--muted); margin: 0 0 2rem; }
+    .section-title::before { content: ""; display: block; width: 3rem; height: 4px; background: var(--red); margin-bottom: .8rem; }
+
+    /* Menu */
+    .menu { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 720px) { .menu { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 1.5rem; }
+    .card h3 { font-size: 1.4rem; display: flex; align-items: center; justify-content: space-between; margin-bottom: .25rem; }
+    .card h3 small { font-family: Inter, sans-serif; font-weight: 500; font-size: .8rem; text-transform: none; letter-spacing: 0; color: var(--muted); }
+    .card .hint { color: var(--muted); font-size: .9rem; margin: 0 0 1rem; }
+    .items { list-style: none; margin: 0; padding: 0; }
+    .items li { display: flex; align-items: baseline; gap: .6rem; padding: .7rem 0; border-top: 1px solid var(--line); }
+    .items li .dots { flex: 1; border-bottom: 2px dotted var(--line); transform: translateY(-.35em); }
+    .items li .price { font-family: Oswald, sans-serif; font-weight: 700; font-size: 1.25rem; color: var(--gold); white-space: nowrap; }
+    .items li .price small { font-size: .7rem; color: var(--muted); font-weight: 500; }
+    .note { color: var(--muted); font-size: .9rem; margin-top: 1.25rem; }
+
+    /* Info */
+    .info-bg { background: var(--bg-2); border-block: 1px solid var(--line); }
+    .info { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    @media (max-width: 800px) { .info { grid-template-columns: 1fr; } }
+    .info .card { display: flex; flex-direction: column; gap: .5rem; }
+    .info .icon { font-size: 1.8rem; }
+    .info .label { color: var(--muted); font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; }
+    .info .value { font-size: 1.25rem; font-weight: 600; }
+    .info .value a { text-decoration: none; }
+    .info .value a:hover { color: var(--gold); }
+    .info .extra { color: var(--muted); font-size: .95rem; }
+
+    /* Map */
+    .map { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--card); aspect-ratio: 16 / 8; }
+    @media (max-width: 720px) { .map { aspect-ratio: 4 / 3; } }
+    .map iframe { width: 100%; height: 100%; border: 0; display: block; filter: saturate(.85); }
+    .map-links { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 2rem 0 5.5rem; color: var(--muted); font-size: .9rem; }
+    footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; }
+
+    /* Mobile call bar */
+    .callbar { position: fixed; inset-inline: 0; bottom: 0; z-index: 20; padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: rgba(15,14,14,.95); border-top: 1px solid var(--line); display: none; }
+    .callbar .btn { width: 100%; justify-content: center; font-size: 1.05rem; }
+    @media (max-width: 640px) { .callbar { display: block; } }
+    @media (min-width: 641px) { footer { padding-bottom: 2rem; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">🥟 Хинкали <span>№1</span></a>
+    <nav class="nav-links">
+      <a href="#menu">Меню</a>
+      <a href="#info">Адрес и часы</a>
+      <a href="#map">Как добраться</a>
+    </nav>
+    <a class="btn btn-red small call" href="tel:+79819885858">Позвонить</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Сертолово · ул. Заречная, 8</div>
+        <h1>Хинкали<br>ручной <span>лепки</span></h1>
+        <p class="lead">Тонкое тесто, сочная начинка, традиционный вкус. Лепим каждый день. Продаём варёные — сразу к столу, и замороженные — домой в морозилку.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="tel:+79819885858">📞 +7 (981) 988-58-58</a>
+          <a class="btn btn-ghost" href="#menu">Смотреть меню</a>
+        </div>
+        <div class="tags">
+          <span class="tag">Ручная лепка</span>
+          <span class="tag">Свинина · говядина · баранина · сыр</span>
+          <span class="tag">Самовывоз</span>
+          <span class="tag">Ежедневно 12:00–20:00</span>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">🥟</div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2 class="section-title">Меню и цены</h2>
+      <p class="section-sub">Цена указана за одну штуку. Готовим на заказ и продаём на вес в заморозке.</p>
+      <div class="menu">
+        <article class="card">
+          <h3>Варёные <small>горячие, готовы к столу</small></h3>
+          <p class="hint">Отварим при вас — заберите горячими.</p>
+          <ul class="items">
+            <li><span>Свинина – говядина</span><span class="dots"></span><span class="price">80 <small>₽/шт</small></span></li>
+            <li><span>Говядина</span><span class="dots"></span><span class="price">90 <small>₽/шт</small></span></li>
+            <li><span>Баранина – говядина</span><span class="dots"></span><span class="price">100 <small>₽/шт</small></span></li>
+            <li><span>Сырные</span><span class="dots"></span><span class="price">80 <small>₽/шт</small></span></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Заморозка <small>домой, в морозилку</small></h3>
+          <p class="hint">Варите дома 10–12 минут в подсоленной воде.</p>
+          <ul class="items">
+            <li><span>Свинина – говядина</span><span class="dots"></span><span class="price">60 <small>₽/шт</small></span></li>
+            <li><span>Говядина</span><span class="dots"></span><span class="price">70 <small>₽/шт</small></span></li>
+            <li><span>Баранина – говядина</span><span class="dots"></span><span class="price">80 <small>₽/шт</small></span></li>
+            <li><span>Сырные</span><span class="dots"></span><span class="price">60 <small>₽/шт</small></span></li>
+          </ul>
+        </article>
+      </div>
+      <p class="note">Хотите большой заказ к празднику? Позвоните заранее — приготовим к нужному времени.</p>
+    </div>
+  </section>
+
+  <section id="info" class="info-bg">
+    <div class="wrap">
+      <h2 class="section-title">Адрес и часы работы</h2>
+      <p class="section-sub">Работаем на самовывоз. Заходите или звоните — отложим заказ.</p>
+      <div class="info">
+        <div class="card">
+          <div class="icon">📍</div>
+          <div class="label">Адрес</div>
+          <div class="value">г. Сертолово,<br>ул. Заречная, д. 8</div>
+          <div class="extra">Слева от входа в «Пятёрочку», под вывеской «Аптека»</div>
+        </div>
+        <div class="card">
+          <div class="icon">🕛</div>
+          <div class="label">Часы работы</div>
+          <div class="value">12:00 – 20:00</div>
+          <div class="extra">Ежедневно, без выходных</div>
+        </div>
+        <div class="card">
+          <div class="icon">📞</div>
+          <div class="label">Телефон</div>
+          <div class="value"><a href="tel:+79819885858">+7 (981) 988-58-58</a></div>
+          <div class="extra">Звоните, чтобы заказать заранее</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="map">
+    <div class="wrap">
+      <h2 class="section-title">Как добраться</h2>
+      <p class="section-sub">Сертолово, ул. Заречная, 8 — здание с «Пятёрочкой», вход слева.</p>
+      <div class="map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?text=%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%97%D0%B0%D1%80%D0%B5%D1%87%D0%BD%D0%B0%D1%8F%2C%208&z=17"
+          title="Хинкали №1 на карте" loading="lazy" allowfullscreen></iframe>
+      </div>
+      <div class="map-links">
+        <a class="btn btn-ghost small" href="https://yandex.ru/maps/?text=%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%2C%20%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%97%D0%B0%D1%80%D0%B5%D1%87%D0%BD%D0%B0%D1%8F%2C%208" target="_blank" rel="noopener">Открыть в Яндекс Картах</a>
+        <a class="btn btn-ghost small" href="https://2gis.ru/search/%D0%A1%D0%B5%D1%80%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%BE%2C%20%D0%97%D0%B0%D1%80%D0%B5%D1%87%D0%BD%D0%B0%D1%8F%208" target="_blank" rel="noopener">Открыть в 2ГИС</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year"></span> Хинкали №1 · Сертолово</div>
+    <div>ул. Заречная, 8 · <a href="tel:+79819885858">+7 (981) 988-58-58</a> · 12:00–20:00</div>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-red" href="tel:+79819885858">📞 Позвонить: +7 (981) 988-58-58</a>
+</div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
