@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="Хинкали">
+  <defs>
+    <radialGradient id="dough" cx="38%" cy="35%" r="75%">
+      <stop offset="0" stop-color="#f7e8c9"/>
+      <stop offset="55%" stop-color="#e6cc9a"/>
+      <stop offset="100%" stop-color="#b98a52"/>
+    </radialGradient>
+    <radialGradient id="knob" cx="40%" cy="30%" r="80%">
+      <stop offset="0" stop-color="#f3e1bf"/>
+      <stop offset="100%" stop-color="#c9a068"/>
+    </radialGradient>
+    <radialGradient id="shadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#000" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="bodyClip"><path d="M172 122 C118 150 58 218 58 290 C58 352 120 392 200 392 C280 392 342 352 342 290 C342 218 282 150 228 122 Z"/></clipPath>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="200" cy="392" rx="150" ry="26" fill="url(#shadow)"/>
+
+  <!-- body -->
+  <path d="M172 122 C118 150 58 218 58 290 C58 352 120 392 200 392 C280 392 342 352 342 290 C342 218 282 150 228 122 Z" fill="url(#dough)"/>
+
+  <!-- pleat shadows (folds spiral clockwise toward the knob) -->
+  <g clip-path="url(#bodyClip)" fill="none" stroke="#a97b45" stroke-width="7" stroke-linecap="round" stroke-opacity=".75">
+    <path d="M196 132 C178 160 130 200 70 240"/>
+    <path d="M197 133 C176 176 132 240 96 310"/>
+    <path d="M199 135 C190 200 166 290 150 372"/>
+    <path d="M202 136 C206 210 214 300 216 392"/>
+    <path d="M206 135 C228 200 262 280 280 370"/>
+    <path d="M210 132 C246 176 300 230 336 300"/>
+    <path d="M213 128 C256 156 310 190 350 232"/>
+  </g>
+  <!-- pleat highlights -->
+  <g clip-path="url(#bodyClip)" fill="none" stroke="#fff5dc" stroke-width="4" stroke-linecap="round" stroke-opacity=".8">
+    <path d="M203 130 C185 158 138 198 80 238"/>
+    <path d="M204 131 C184 174 141 238 106 308"/>
+    <path d="M206 133 C198 198 175 288 160 370"/>
+    <path d="M209 134 C214 208 223 298 226 390"/>
+    <path d="M213 133 C236 198 270 278 288 368"/>
+    <path d="M217 130 C254 174 308 228 344 298"/>
+  </g>
+
+  <!-- neck / gathered dough -->
+  <path d="M164 128 C176 112 224 112 236 128 C226 140 174 140 164 128 Z" fill="#b98a52"/>
+
+  <!-- knob (twisted top) -->
+  <path d="M168 126 C158 96 170 62 200 54 C230 62 242 96 232 126 C222 134 178 134 168 126 Z" fill="url(#knob)"/>
+  <g fill="none" stroke="#a97b45" stroke-width="5" stroke-linecap="round" stroke-opacity=".7">
+    <path d="M182 118 C178 96 186 74 200 62"/>
+    <path d="M200 120 C196 98 202 76 214 64"/>
+    <path d="M218 116 C218 96 220 80 226 72"/>
+  </g>
+  <g fill="none" stroke="#fff5dc" stroke-width="3" stroke-linecap="round" stroke-opacity=".8">
+    <path d="M188 116 C184 96 192 76 206 64"/>
+    <path d="M207 118 C203 98 209 78 221 68"/>
+  </g>
+
+  <!-- sheen -->
+  <path d="M120 200 C140 170 165 150 190 142" fill="none" stroke="#fffaf0" stroke-width="10" stroke-linecap="round" stroke-opacity=".35"/>
+
+  <!-- pepper + herbs -->
+  <g fill="#3a2a1c" opacity=".85">
+    <circle cx="150" cy="250" r="3"/><circle cx="235" cy="205" r="2.5"/><circle cx="290" cy="300" r="3"/>
+    <circle cx="120" cy="320" r="2.5"/><circle cx="212" cy="330" r="2"/><circle cx="270" cy="240" r="2"/>
+  </g>
+  <g fill="#4f8a3b">
+    <path d="M250 275 c8 -8 18 -8 22 -2 c-8 6 -14 8 -22 2 z"/>
+    <path d="M140 300 c-6 -9 -4 -18 2 -21 c5 8 5 15 -2 21 z"/>
+  </g>
+</svg>

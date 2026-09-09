@@ -8,7 +8,7 @@
   <meta property="og:title" content="Хинкали №1 — Сертолово">
   <meta property="og:description" content="Хинкали ручной лепки. Варёные и замороженные, самовывоз. ул. Заречная 8, рядом с «Пятёрочкой». 12:00–20:00.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥟</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="/khinkali.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -46,6 +46,7 @@
     }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .85rem 0; }
     .logo { font-family: Oswald, Impact, sans-serif; font-weight: 700; font-size: 1.5rem; text-transform: uppercase; text-decoration: none; display: flex; align-items: center; gap: .5rem; }
+    .logo img { width: 34px; height: 36px; }
     .logo span { color: var(--red); }
     .nav-links { display: flex; gap: 1.4rem; font-size: .95rem; font-weight: 500; }
     .nav-links a { text-decoration: none; color: var(--muted); }
@@ -87,7 +88,8 @@
     .hero .actions { display: flex; flex-wrap: wrap; gap: .8rem; }
     .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2rem; }
     .tag { border: 1px solid var(--line); border-radius: 999px; padding: .35rem .8rem; font-size: .85rem; color: var(--muted); }
-    .hero-art { display: grid; place-items: center; font-size: clamp(7rem, 18vw, 13rem); line-height: 1; filter: drop-shadow(0 20px 40px rgba(0,0,0,.6)); user-select: none; }
+    .hero-art { display: grid; place-items: center; user-select: none; }
+    .hero-art img { width: min(100%, 380px); height: auto; filter: drop-shadow(0 24px 40px rgba(0,0,0,.6)); }
     @media (max-width: 800px) {
       .hero .wrap { grid-template-columns: 1fr; }
       .hero-art { display: none; }
@@ -146,7 +148,7 @@
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top">🥟 Хинкали <span>№1</span></a>
+    <a class="logo" href="#top"><img src="/khinkali.svg" alt="" width="34" height="36"> Хинкали <span>№1</span></a>
     <nav class="nav-links">
       <a href="#menu">Меню</a>
       <a href="#info">Адрес и часы</a>
@@ -174,7 +176,7 @@
           <span class="tag">Ежедневно 12:00–20:00</span>
         </div>
       </div>
-      <div class="hero-art" aria-hidden="true">🥟</div>
+      <div class="hero-art" aria-hidden="true"><img src="/khinkali.svg" alt=""></div>
     </div>
   </section>
 
